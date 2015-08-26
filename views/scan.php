@@ -21,7 +21,7 @@ exec("system/scan.sh $duplex");
 $scans = array();
 $dir = new DirectoryIterator('scans');
 foreach ($dir as $fileinfo) {
-	if (!$fileinfo->isDot()) {
+	if (!$fileinfo->isDot() && $fileinfo->getFilename() != "empty") {
    		$scans[$fileinfo->getMTime().'-'.$fileinfo->getBasename('.png')] = $fileinfo->getFilename();
 	}
 }
