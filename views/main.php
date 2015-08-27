@@ -28,7 +28,7 @@
     <div class="panel-heading">
         Scan Receipts
         <div class="btn-group pull-right" style="margin-top: -2px;">
-            <span class="label label-default">Computer <?= $alphabet[Config::get('COMPUTER_ID')] ?></button>
+            <span class="label label-default">Scanner <?= $alphabet[Config::get('COMPUTER_ID')] ?></button>
         </div>
     </div>
     <div class="panel-body">
