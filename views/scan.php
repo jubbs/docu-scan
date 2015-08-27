@@ -9,11 +9,12 @@ $typeId = $_POST['typeId'];
 $duplex = isset($_POST['duplex']) && $_POST['duplex'] ? 'both' : 'front';
 
 // Execute scanning script
-?><div class="alert alert-info" role="alert">Scanning...</div><?php
+?><div class="alert alert-info alert-hideme" role="alert">Scanning...</div><?php
 ob_flush();
 flush();
 //exec('system/scan.bat ' . $customerId . ' ' . time());
-exec("system/scan.sh $duplex");
+//exec("system/scan.sh $duplex");
+sleep(2);
 // ------------------------------
 
 
@@ -76,8 +77,8 @@ if (empty($scans)) {
     $post->addGroup($group);
     // ------------------------------
     
-    ?><div class="alert alert-info" role="alert">Uploading <?= count($scans); ?> scan(s)...</div><?php
-    ?><div class="alert alert-spinner" style="text-align: center;" role="alert"><img src="assets/img/spinner.gif" width="26" height="26" /></div><?php
+    ?><div class="alert alert-info alert-hideme" role="alert">Uploading <?= count($scans); ?> scan(s)...</div><?php
+    ?><div class="alert alert-spinner alert-hideme" style="text-align: center;" role="alert"><img src="assets/img/spinner.gif" width="26" height="26" /></div><?php
     ob_flush();
 	flush();
     
@@ -108,6 +109,8 @@ if (empty($scans)) {
     		?><div class="alert alert-danger" role="alert">Failed to parse JSON. Is the docu-server URL correct?</div><?php
     	}
 	}
+
+    $inlineScript .= '<script type="text/javascript">var hideSpinner = true;</script>';
     
 }
 

@@ -4,6 +4,7 @@ $(window).load(function () {
     loaded = true;
     validateForm();
     $('[data-toggle="tooltip"]').tooltip();
+    checkHide();
 });
 
 $("#typeSelect").on("change", function(){
@@ -18,6 +19,10 @@ $("#typeSelect").on("change", function(){
 	} else {
 		$('#quarterSelect').hide();
 	}
+});
+
+$("#uploadButton").on('click', function() {
+	$('.alert').slideUp();
 });
 
 function validateForm() {
@@ -52,3 +57,9 @@ $( "#customerLookup" ).autocomplete({
     return $( "<li>" ).append( "<a><strong>" + item.id + "</strong> - " + item.label + "</a>" )
     .appendTo( ul );
 };
+
+function checkHide() {
+	if (typeof hideSpinner != 'undefined' && hideSpinner) {
+		$('.alert-hideme').slideUp();
+	}
+}

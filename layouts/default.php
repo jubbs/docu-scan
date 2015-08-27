@@ -46,6 +46,6 @@
     <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <?php if (isset($inlineScript)) {echo($inlineScript);}?>
-    <script src="assets/js/index.js"></script>
+    <script src="assets/js/index.js?<?php echo(time()); ?>"></script>
   </body>
 </html>

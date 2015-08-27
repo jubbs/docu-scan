@@ -14,7 +14,7 @@ Config::set('MAIN_DATABASE', array(
 ));
 
 Config::set('RECEIPT_TYPES', array(
-    -1 => 'Purchace Receipt'
+    -1 => 'Purchase Receipt'
 ));
 
 Config::set('DOC_TYPES', array(
