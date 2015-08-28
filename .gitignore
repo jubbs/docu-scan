@@ -1,5 +1,5 @@
 *.tmp
+*.bat
+
 system/config.php
-system/scan.bat
-test.bat
 scans/*.png

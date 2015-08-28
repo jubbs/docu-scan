@@ -13,8 +13,7 @@ $duplex = isset($_POST['duplex']) && $_POST['duplex'] ? 'both' : 'front';
 ob_flush();
 flush();
 //exec('system/scan.bat ' . $customerId . ' ' . time());
-//exec("system/scan.sh $duplex");
-sleep(2);
+exec("system/scan.sh $duplex");
 // ------------------------------
 
 
