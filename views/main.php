@@ -82,8 +82,14 @@
             	</select>
             </div>
             
+            <button type="button" class="btn btn-default active group-toggle" data-toggle="button" title="Group" data-tt="tooltip">
+               <span class="glyphicon glyphicon-duplicate"></span>
+            </button>
+            
+            <input class="group-check hidden" type="checkbox" name="group" checked="checked">
+            
             <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default" title="Duplex" data-toggle="tooltip">
+                <label class="btn btn-default" title="Duplex" data-tt="tooltip">
                     <input type="checkbox" autocomplete="off" name="duplex"><span class="glyphicon glyphicon-retweet"></span>
                 </label>
             </div>

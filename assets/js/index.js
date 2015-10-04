@@ -4,20 +4,31 @@ $(window).load(function () {
     loaded = true;
     validateForm();
     $('[data-toggle="tooltip"]').tooltip();
+    $('[data-tt="tooltip"]').tooltip();
     checkHide();
 });
 
 $("#typeSelect").on("change", function(){
 	if ($(this).val() < 0) {
 		$('#sourceSelect').hide();
+		$(".group-toggle").show();
 	} else {
 		$('#sourceSelect').show();
+		$(".group-toggle").hide();
 	}
 	
 	if ($(this).val() == -2) {
 		$('#quarterSelect').show();
 	} else {
 		$('#quarterSelect').hide();
+	}
+});
+
+$(".group-toggle").on("click", function(){
+	if ($(this).hasClass('active')) {
+		$('.group-check').prop('checked', false);
+	} else {
+		$('.group-check').prop('checked', true);
 	}
 });
 

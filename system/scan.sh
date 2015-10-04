@@ -1,6 +1,6 @@
 #!/bin/bash
 
-scanimage -d kds_i2000:i2000 --resolution 300 --batch --duplex $1 --mode Color
+scanimage -d kds_i2000:i2000 --resolution 200 --batch --duplex $1 --mode Color
 
 i=0
 for filename in *.pnm; do

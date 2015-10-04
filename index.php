@@ -1,6 +1,7 @@
 <?php
 
 	require_once('system/util.php');
+	require_once('system/import-part-v1.php');
 	require_once('system/config.php');
 	
 	$alphabet = Config::get('ALPHABET');
